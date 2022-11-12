@@ -10,6 +10,13 @@
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/stack/medical/splint/ghetto = 1)
 
+/obj/item/storage/box/mk11_case
+	name = "MK11 Whisper Case"
+	desc = "A small box designed to store an MK11 Whisper for long periods of time without requiring maintence."
+	startswith = list(
+		/obj/item/gun/projectile/pistol/mk11 = 1,
+		/obj/item/ammo_magazine/scp/mk9 = 3)
+
 /obj/item/stamp/approved
 	name = "\improper APPROVED rubber stamp"
 	icon_state = "stamp-approve"

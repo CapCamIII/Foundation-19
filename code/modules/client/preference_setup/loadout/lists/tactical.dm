@@ -55,9 +55,15 @@
 /datum/gear/tactical/balaclava
 	display_name = "balaclava"
 	path = /obj/item/clothing/mask/balaclava
-	
+
 //Combat knifes can be printed at a hacked autolathe with ease, high point penalty for spawning with one round start
 /datum/gear/tactical/cknife
 	display_name = "combat knife"
 	path = /obj/item/material/knife/combat
-	cost = 8	
+	cost = 8
+
+//It is a fancy version of the MK9, a less fire-rate but it is suppressed, costs 10 points so you can't get anything else in conjunction with it. IC-wise its available via back-order only.
+/datum/gear/tactical/mk11
+	display_name = "MK11 Pistol"
+	path = /obj/item/storage/box/mk11_case
+	cost = 10

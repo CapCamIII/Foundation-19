@@ -151,3 +151,45 @@
 	. = ..()
 	// 30% chance of being faulty
 	faulty = prob(30)
+
+/obj/item/clothing/glasses/hud/mtf
+	name = "Prototype SCRAMBLE goggles"
+	desc = "The newest version of SCRAMBLE goggles, these incorporate night vision, and the option to switch between a combat mode with security hud and flash protection, or SCRAMBLE vision. Extremely fancy, and even more expensive; they are only provided to Mobile Task Force units due to their experimental nature and cost."
+	darkness_view = 7
+	icon_state = "mtf_goggles"
+	off_state = "scramble"
+	item_state = "glasses"
+	action_button_name = "Toggle Mode"
+	activation_sound = 'sound/effects/pop.ogg'
+
+	var/on = TRUE
+	var/hud_holder
+
+/obj/item/clothing/glasses/hud/mtf/Initialize()
+	. = ..()
+	overlay = GLOB.global_hud.nvg
+	hud_holder = hud
+
+/obj/item/clothing/glasses/hud/mtf/Destroy()
+	qdel(hud_holder)
+	hud_holder = null
+	hud = null
+	. = ..()
+
+/obj/item/clothing/glasses/hud/mtf/attack_self(mob/user)
+	if(toggleable && !user.incapacitated())
+		on = !on
+		if(on)
+			to_chat(user, "You switch \the [src] to security hud mode, disabling SCRAMBLE function.")
+			hud_type = HUD_SECURITY
+			flash_protection = FLASH_PROTECTION_MODERATE
+		else
+			flash_protection = initial(flash_protection)
+			src.hud = null
+			to_chat(user, "You toggle \the [src]'s SCRAMBLE function on, disabling the security hud and flash protection.")
+			overlay = GLOB.global_hud.scramble
+			flash_protection = FLASH_PROTECTION_NONE
+		update_icon()
+		sound_to(user, activation_sound)
+		user.update_inv_glasses()
+		user.update_action_buttons()

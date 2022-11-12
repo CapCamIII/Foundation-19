@@ -431,7 +431,7 @@
 		/obj/item/clothing/glasses/night,
 		/obj/item/clothing/accessory/ubac,
 		/obj/item/storage/backpack/rucksack,
-		/obj/item/gun/projectile/pistol/mk9,
+		/obj/item/gun/projectile/pistol/mk11,
 		/obj/item/ammo_magazine/scp/mk9 = 3,
 		/obj/item/ammo_magazine/box/mk9,
 		/obj/item/storage/belt/holster/security/tactical,

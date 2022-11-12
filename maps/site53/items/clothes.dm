@@ -59,3 +59,9 @@
 	body_parts_covered = UPPER_TORSO | LOWER_TORSO | LEGS | ARMS
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | ARMS
 	armor = list(melee = 40, bullet = 85, laser = 40, energy = 25, bomb = 30, bio = 15, rad = 10)
+
+/obj/item/clothing/mask/gas/scp/ntf
+	name = "tactical gas mask"
+	desc = "A sturdy face-covering gas-mask, meant to protect its wearer from all manner of CBRN threats. It can be used with an independent air supply or as a filtration system. This one has equipped with a smaller frame, and orange eye-pieces."
+	icon_state = "fullgas-NTF"
+	item_state = "fullgas-NTF"

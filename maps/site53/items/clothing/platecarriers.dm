@@ -36,6 +36,11 @@
 	item_flags = ITEM_FLAG_THICKMATERIAL|ITEM_FLAG_AIRTIGHT
 	body_parts_covered = HEAD|FACE|EYES
 
+/obj/item/clothing/head/helmet/mtftactical/ntf
+	name = "tactical composite helmet"
+	desc = "An armored composite helmet with an unfilled NVG slot attached to the front of the helmet."
+	icon_state = "e11-tactical-helmet"
+
 /obj/item/clothing/suit/armor/mtfheavy //YOU'RE UP AGAINST THE WALL AND *I AM THE FUCKING WALL*
 	name = "combined heavy assault suit"
 	desc = "A multi-layered composite armor suit with ballistic weave underpadding and a kevlar undersuit, fitted with it's own cooling unit and exoskeleton supports. 'Nu-7' is emblazoned on the collar, and 'Hammer Down' is sewed into the back of it."
@@ -53,7 +58,7 @@
 
 /obj/item/clothing/suit/armor/mtftactical
 	name = "tactical armor suit"
-	desc = "An advanced multi-plated composite vest with kevlar lining and plenty of room to move. 'E-11' is sewn into the left pauldron, and 'Nine Tailed Fox' is sewn into the right."
+	desc = "An advanced multi-plated composite vest with kevlar lining and plenty of room to move."
 	icon_state = "mtf-tactical"
 	item_state = "mtf-tactical"
 	permeability_coefficient = 0
@@ -64,6 +69,12 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	item_flags = ITEM_FLAG_THICKMATERIAL|ITEM_FLAG_PHORONGUARD|ITEM_FLAG_AIRTIGHT
 	armor = list(melee = 80, bullet = 85, laser = 65, energy = 15, bomb = 80, bio = 40, rad = 60)
+
+/obj/item/clothing/suit/armor/mtftactical/ntf
+	name = "tactical armor suit"
+	desc = "An advanced multi-plated composite vest with kevlar lining and plenty of room to move. 'E-11' is sewn into the right pauldron."
+	icon_state = "e11-tactical"
+	item_state = "e11-tactical"
 
 //GOC
 /obj/item/clothing/suit/armor/goc

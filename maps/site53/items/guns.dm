@@ -34,6 +34,19 @@
 	magazine_type = /obj/item/ammo_magazine/scp/mk9
 	allowed_magazines = list(/obj/item/ammo_magazine/scp/mk9, /obj/item/ammo_magazine/scp/mk9/rubber)
 
+/obj/item/gun/projectile/pistol/mk11
+	name = "MK11 Whisper"
+	desc = "One of a few weapons in service by the Foundation actually designed by the Foundation, the MK11 Whisper is equipped with an intergrated suppressor and laser sight; it is the standard issue sidearm for field operatives, Mobile Task Force agents, and is also aquirable via back-order by other personnel. The MK11 Whisper is capable of interchanging magazines with the MK9 Foundation Glock."
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "MK11"
+	w_class = ITEM_SIZE_NORMAL
+	caliber = "9mm"
+	silenced = 1
+	fire_delay = 3
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ESOTERIC = 2)
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/scp/mk9
+	allowed_magazines = list(/obj/item/ammo_magazine/scp/mk9, /obj/item/ammo_magazine/scp/mk9/rubber)
 
 /obj/item/gun/projectile/revolver/mateba
 	name = "mateba"

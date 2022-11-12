@@ -43,9 +43,16 @@
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
 
+/obj/item/clothing/under/scp/ntf
+	name = "Epsilon-11 uniform"
+	desc = "A set set of tactical clothes featuring black tactical pants and the signature brown and black combat jacket of Nine-Tailed-Fox. Lightly armored."
+	icon_state = "e11_uniform"
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 0.9
+
 /obj/item/clothing/under/scp/alpha
 	name = "Alpha-1 uniform"
-	desc = "A modified uniform made specificly for the MTF unit 'Red Right Handp'."
+	desc = "A modified uniform made specificly for the MTF unit 'Red Right Hand'."
 	icon_state = "alpha-uniform"
 	armor = list(melee = 30, bullet = 30, laser = 10, energy = 0, bomb = 5, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
