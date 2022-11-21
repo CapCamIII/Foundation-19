@@ -65,3 +65,5 @@
 	desc = "A sturdy face-covering gas-mask, meant to protect its wearer from all manner of CBRN threats. It can be used with an independent air supply or as a filtration system. This one has equipped with a smaller frame, and orange eye-pieces."
 	icon_state = "fullgas-NTF"
 	item_state = "fullgas-NTF"
+	item_flags = ITEM_FLAG_BLOCK_GAS_SMOKE_EFFECT|ITEM_FLAG_THICKMATERIAL|ITEM_FLAG_PHORONGUARD|ITEM_FLAG_AIRTIGHT
+	armor = list(melee = 80, bullet = 83, laser = 50,energy = 25, bomb = 50, bio = 100, rad = 60)//same armor as helmet, works as a full set

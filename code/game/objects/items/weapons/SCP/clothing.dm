@@ -45,7 +45,7 @@
 
 /obj/item/clothing/under/scp/ntf
 	name = "Epsilon-11 uniform"
-	desc = "A set set of tactical clothes featuring black tactical pants and the signature brown and black combat jacket of Nine-Tailed-Fox. Lightly armored."
+	desc = "A set set of tactical clothes featuring black tactical pants and the signature brown combat jacket of Nine-Tailed-Fox, the left shoulder has a small patch of the Nine-Tailed-Fox insignia, and the right has 'E-11' embroidered into it. Lightly armored for that extra edge."
 	icon_state = "e11_uniform"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9

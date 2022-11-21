@@ -128,7 +128,7 @@
 	action_button_name = "Toggle Goggles"
 	toggleable = TRUE
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
-	off_state = "denight"
+	off_state = "descramble"
 	electric = TRUE
 	var/faulty = FALSE
 
@@ -153,43 +153,19 @@
 	faulty = prob(30)
 
 /obj/item/clothing/glasses/hud/mtf
-	name = "Prototype SCRAMBLE goggles"
-	desc = "The newest version of SCRAMBLE goggles, these incorporate night vision, and the option to switch between a combat mode with security hud and flash protection, or SCRAMBLE vision. Extremely fancy, and even more expensive; they are only provided to Mobile Task Force units due to their experimental nature and cost."
+	name = "Prototype Combat Goggles"
+	desc = "Fresh off the presses, these goggles feature advanced night vision capabilities, a high-tech security hud, and re-purposed technology from SCRAMBLE goggles, re-tooled to intercept extreme sources of light from sources such as a handheld flash; note, in the process of this, the ability of these goggles to intercept the face of SCP-096 was disabled. Very advanced, and even more expensive; these are only deployed by the Foundation with their Mobile Task Force teams."
 	darkness_view = 7
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	hud = /obj/item/clothing/glasses/hud/security
+	electric = TRUE
+	flash_protection = FLASH_PROTECTION_MODERATE
 	icon_state = "mtf_goggles"
-	off_state = "scramble"
+	off_state = "demtf_goggles"
 	item_state = "glasses"
 	action_button_name = "Toggle Mode"
 	activation_sound = 'sound/effects/pop.ogg'
 
-	var/on = TRUE
-	var/hud_holder
-
-/obj/item/clothing/glasses/hud/mtf/Initialize()
+/obj/item/clothing/glasses/hud/mtf/Initialize()//just gives the red overlay, no mob-view
 	. = ..()
-	overlay = GLOB.global_hud.nvg
-	hud_holder = hud
-
-/obj/item/clothing/glasses/hud/mtf/Destroy()
-	qdel(hud_holder)
-	hud_holder = null
-	hud = null
-	. = ..()
-
-/obj/item/clothing/glasses/hud/mtf/attack_self(mob/user)
-	if(toggleable && !user.incapacitated())
-		on = !on
-		if(on)
-			to_chat(user, "You switch \the [src] to security hud mode, disabling SCRAMBLE function.")
-			hud_type = HUD_SECURITY
-			flash_protection = FLASH_PROTECTION_MODERATE
-		else
-			flash_protection = initial(flash_protection)
-			src.hud = null
-			to_chat(user, "You toggle \the [src]'s SCRAMBLE function on, disabling the security hud and flash protection.")
-			overlay = GLOB.global_hud.scramble
-			flash_protection = FLASH_PROTECTION_NONE
-		update_icon()
-		sound_to(user, activation_sound)
-		user.update_inv_glasses()
-		user.update_action_buttons()
+	overlay = GLOB.global_hud.thermal

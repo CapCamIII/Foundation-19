@@ -38,8 +38,9 @@
 
 /obj/item/clothing/head/helmet/mtftactical/ntf
 	name = "tactical composite helmet"
-	desc = "An armored composite helmet with an unfilled NVG slot attached to the front of the helmet."
+	desc = "An armored composite helmet with an unfilled slot for night vision goggles attached to the front of the helmet."
 	icon_state = "e11-tactical-helmet"
+	body_parts_covered = HEAD//they have gas-mask by default
 
 /obj/item/clothing/suit/armor/mtfheavy //YOU'RE UP AGAINST THE WALL AND *I AM THE FUCKING WALL*
 	name = "combined heavy assault suit"

@@ -43,13 +43,14 @@ GLOBAL_DATUM_INIT(ert, /datum/antagonist/ert, new)
 /datum/antagonist/ert/equip(var/mob/living/carbon/human/player)
 
 	//Special radio setup
-	player.add_language(LANGUAGE_ENGLISH)
+	player.add_language(LANGUAGE_ENGLISH, LANGUAGE_SIGN)
 	player.equip_to_slot_or_del(new /obj/item/device/radio/headset/ert(src), slot_l_ear)
-	player.equip_to_slot_or_del(new /obj/item/clothing/under/ert(src), slot_w_uniform)
+	player.equip_to_slot_or_del(new /obj/item/clothing/under/scp/ntf(src), slot_w_uniform)
+	player.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/scp/ntf(src), slot_wear_mask)
 	player.equip_to_slot_or_del(new /obj/item/clothing/shoes/swat(src), slot_shoes)
 	player.equip_to_slot_or_del(new /obj/item/clothing/gloves/thick/swat(src), slot_gloves)
-	player.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/mtftactical(player), slot_head)
-	player.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/mtftactical(player), slot_wear_suit)
+	player.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/mtftactical/ntf(player), slot_head)
+	player.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/mtftactical/ntf(player), slot_wear_suit)
 
 	create_id(role_text, player)
 	return 1
